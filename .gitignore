@@ -49,3 +49,9 @@ bower_components
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
+
+# testing
+/coverage
+
+# production
+/build
