@@ -1,28 +1,53 @@
-.App {
-  text-align: center;
+.app {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
+.app__header {
   padding: 20px;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.App-title {
-  font-size: 1.5em;
+.app__button {
+  cursor: pointer;
+  outline: 0;
+
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
 }
 
-.App-intro {
-  font-size: large;
+.app__button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.app__photo {
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  object-fit: cover;
 }
