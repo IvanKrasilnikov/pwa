@@ -41,6 +41,7 @@ class App extends Component {
       <div className="app">
         <header className="app__header">
           <button
+            aria-label="change current photo"
             className="app__button"
             name="button"
             onClick={this.requestToUnsplash}
