@@ -5,7 +5,7 @@
   "background_color": "#000000",
   "display": "fullscreen",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/?start=true",
   "icons": [
     {
       "src": "logo.svg",
