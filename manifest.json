@@ -1,6 +1,6 @@
 {
   "name": "Random Unsplash Photo",
-  "short_name": "Unsplash Random",
+  "short_name": "URP",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
