@@ -1,15 +1,16 @@
 {
-  "name": "Randon Unsplash Photo",
-  "short_name": "Random Photo",
+  "name": "Random Unsplash Photo",
+  "short_name": "Unsplash Random",
   "theme_color": "#000000",
   "background_color": "#000000",
-  "display": "fullscreen",
+  "display": "standalone",
   "scope": "/",
   "start_url": "/pwa/index.html",
   "icons": [
     {
-      "src": "logo.svg",
-      "sizes": "512x512 192x192 64x64 32x32 24x24 16x16"
+      "src": "favicon.ico",
+      "sizes": "512x512 192x192 64x64 32x32 24x24 16x16",
+      "type": "image/x-icon" 
     }
   ]
 }
