@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-starturl" content="/">
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -86,6 +89,7 @@
         justify-content: center;
         align-items: center;
         flex: 1 1 auto;
+        position: relative;
         overflow: hidden;
       }
 
@@ -93,6 +97,26 @@
         height: 100%;
         width: 100%;
         border-radius: 4px;
+      }
+
+      .app__error {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        font-size: 56px;
+        transform: translate3d(-50%, -50%, 0);
+        animation: fadeIn 200ms ease both;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
       }
     </style>
   </head>

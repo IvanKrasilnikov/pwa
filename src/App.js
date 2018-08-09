@@ -10,6 +10,7 @@ class App extends Component {
   });
 
   state = {
+    error: false,
     photoUrl: '',
   };
 
@@ -30,11 +31,30 @@ class App extends Component {
         const requestPhotoUrl = json.urls.regular;
 
         localStorage.setItem('photoUrl', requestPhotoUrl);
-        this.setState({ photoUrl: requestPhotoUrl });
+        this.setState({
+          error: false,
+          photoUrl: requestPhotoUrl
+        });
+      })
+      .catch(() => {
+        this.setState({ error: true });
       });
   };
 
   // ;;render --------------------------------------------------------------------------------------
+
+  renderError() {
+    if (!this.state.error) return null;
+
+    return (
+      <span
+        aria-label="error"
+        className="app__error"
+        role="img">
+        😔
+      </span>
+    );
+  }
 
   render() {
     return (
@@ -49,14 +69,17 @@ class App extends Component {
             <img
               className="app__logo"
               src={`${process.env.PUBLIC_URL}/logo.svg`}
-              alt="" />
+              alt=""
+            />
           </button>
         </header>
         <div className="app__content">
+          {this.renderError()}
           <img
             className="app__photo"
             src={this.state.photoUrl}
-            alt="" />
+            alt=""
+          />
         </div>
       </div>
     );
